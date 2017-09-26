@@ -3,18 +3,18 @@
 
 const byte POT = A0;
 
-const byte SERVO_SPEED = 60;  //minimum number of milliseconds per degree)
-const byte THETA_MAX = 100;
+const byte SERVO_SPEED = 50;  //minimum number of milliseconds per degree)
+const byte THETA_MAX = 50;
 const byte THETA_MIN = 0;
 const byte THETA_INCREMENT = 1;
 
 const byte PHI_INCREMENT = 1;
-const byte PHI_MAX = 100;
+const byte PHI_MAX = 50;
 const byte PHI_MIN = 0;
 
 
-byte curr_theta = 100;
-byte curr_phi = 100;
+byte curr_theta = 50;
+byte curr_phi = 50;
 
 
 boolean flag = 0;
@@ -28,8 +28,8 @@ Servo servo_phi;  // create servo object to control a servo
 void setup() {
   servo_theta.attach(9); // attaches the servo on pin 9 to the servo object
   servo_phi.attach(10);  // attaches the servo on pin 10 to the servo object
-  servo_theta.writeMicroseconds(1000);
-  servo_phi.writeMicroseconds(1000);
+  servo_theta.writeMicroseconds(700);
+  servo_phi.writeMicroseconds(700);
   Serial.begin(9600);
 }
 
