@@ -28,7 +28,6 @@ def parse_line(line):
 ser = serial.Serial('/dev/ttyACM0', baudrate=9600, timeout=20)
 print("connected to: " + ser.portstr)
 
-
 points = []
 while True:
     line = ser.readline()

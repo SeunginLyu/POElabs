@@ -24,7 +24,7 @@ String result = "";
 
 Servo servo_theta;
 Servo servo_phi;  // create servo object to control a servo
-// twelve servo objects can be created on most boards
+
 void setup() {
   servo_theta.attach(9); // attaches the servo on pin 9 to the servo object
   servo_phi.attach(10);  // attaches the servo on pin 10 to the servo object
@@ -38,9 +38,9 @@ void loop() {
   static unsigned long servo_time;
   // check time since last servo position update
   if ((millis() - servo_time) >= SERVO_SPEED) {
-    servo_time = millis(); // save time reference for next position update
+    servo_time = millis();
     if (curr_phi == PHI_MAX || curr_phi == PHI_MIN) {
-      flag = (flag + 1) % 2;
+      flag = (flag + 1) % 2; // Everytime the vertical servo swipes from top to bottom, flag is toggled.
       curr_theta = (curr_theta + THETA_INCREMENT) % THETA_MAX;
       servo_theta.write(curr_theta);
     }
