@@ -1,6 +1,6 @@
 import serial
 
-ser = serial.Serial('/dev/ttyACM1', baudrate=9600, timeout=20)
+ser = serial.Serial('/dev/ttyACM1', baudrate=9600, timeout=2000)
 
 f = open('output.csv', 'w+')
 while True:

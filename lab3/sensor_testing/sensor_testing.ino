@@ -78,7 +78,7 @@ void loop() {
        rightMotor->setSpeed(rightSpeed);
        leftMotor->run(FORWARD);
        rightMotor->run(BACKWARD);
-       Serial.println("straight");
+//       Serial.println("straight");
     }
     else if(!leftBlack && rightBlack){ // turning right
       rightSpeed = 0;
@@ -87,7 +87,7 @@ void loop() {
       rightMotor->setSpeed(rightSpeed);
       leftMotor->run(FORWARD);
       rightMotor->run(RELEASE);
-      Serial.println("turning right");
+//      Serial.println("turning right");
     }
     else if(leftBlack && !rightBlack){ // turning left
       leftSpeed = 0;
@@ -96,7 +96,7 @@ void loop() {
       rightMotor->setSpeed(rightSpeed);
       leftMotor->run(RELEASE);
       rightMotor->run(BACKWARD); 
-       Serial.println("turning left");
+//       Serial.println("turning left");
     }
     Serial.print(leftValue);
     Serial.print(",");
